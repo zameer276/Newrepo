@@ -22,6 +22,8 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
+import Logo from './components/Logo.tsx';
+
 const WHATSAPP_LINK = "https://wa.me/919622452158?text=Hello%20Doctor%20I%20want%20to%20book%20an%20appointment%20at%20Dr%20Mahee's%20Dental%20Clinic";
 const CLINIC_NAME = "Dr Mahee's Dental Clinic";
 const CLINIC_ADDRESS = "Khayam Chowk, Khyber Medical Institute, Srinagar, Jammu and Kashmir 190001";
@@ -42,14 +44,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-2">
-            <div className="bg-primary p-2 rounded-lg">
-              <Smile className="text-white w-6 h-6" />
-            </div>
-            <span className="text-xl font-bold text-slate-900 tracking-tight">
-              Dr Mahee's <span className="text-primary">Dental</span>
-            </span>
-          </div>
+          <Logo />
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
@@ -617,13 +612,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-primary p-2 rounded-lg">
-                <Smile className="text-white w-6 h-6" />
-              </div>
-              <span className="text-2xl font-bold text-white tracking-tight">
-                Dr Mahee's <span className="text-primary">Dental</span>
-              </span>
+            <div className="mb-6">
+              <Logo />
             </div>
             <p className="text-slate-400 max-w-md leading-relaxed mb-8">
               Providing premium dental care in Srinagar. Our clinic is committed to delivering 
