@@ -484,16 +484,22 @@ const AppointmentSection = () => {
 };
 
 const MapSection = () => {
+  const MAP_LINK = "https://g.co/kgs/FRoHbj";
+  
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-4">Location</h2>
           <h3 className="text-4xl font-bold text-slate-900 mb-6">Find Us in Srinagar</h3>
+          <p className="text-slate-600 max-w-2xl mx-auto">
+            We are conveniently located at Khyber Medical Institute, Khayam Chowk. 
+            Visit us for premium dental care.
+          </p>
         </div>
-        <div className="rounded-[40px] overflow-hidden shadow-xl h-[450px] border-8 border-white">
+        <div className="rounded-[40px] overflow-hidden shadow-xl h-[450px] border-8 border-white mb-10">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m11!1m3!1d3304.567890123456!2d74.8123456!3d34.0812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f0000000001%3A0x0!2sKhyber%20Medical%20Institute!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.567890123456!2d74.8123456!3d34.0812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f0000000001%3A0x0!2sKhyber%20Medical%20Institute!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -501,6 +507,17 @@ const MapSection = () => {
             loading="lazy"
             title="Clinic Location"
           />
+        </div>
+        <div className="text-center">
+          <a 
+            href={MAP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all border border-slate-100"
+          >
+            <MapPin className="w-5 h-5 text-primary" />
+            Open in Google Maps
+          </a>
         </div>
       </div>
     </section>
@@ -523,6 +540,14 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-2">Clinic Address</h4>
                   <p className="text-slate-600 leading-relaxed">{CLINIC_ADDRESS}</p>
+                  <a 
+                    href="https://g.co/kgs/FRoHbj" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary font-bold mt-2"
+                  >
+                    View on Google Maps <ChevronRight className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
               <div className="flex gap-6">
